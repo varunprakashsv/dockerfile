@@ -5,9 +5,13 @@
   tasks:
     - name: install python pip
       yum:
-        name : python-pip
+        name: python-pip
         state: present
     - name: install docker
+      yum:
+        name: docker
+        state: present
+    - name: start docker
       service:
         name : docker
         state: started
